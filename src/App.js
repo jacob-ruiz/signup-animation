@@ -38,7 +38,7 @@ function Box2({ sso, toggleSSO }) {
 }
 
 export default function App() {
-  const [sso, setSSO] = useState(true);
+  const [sso, setSSO] = useState(false);
 
   function toggleSSO() {
     setSSO(!sso);

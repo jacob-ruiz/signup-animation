@@ -1,10 +1,73 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 body {
   margin: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 .App {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
+}
+
+.box-container {
+  position: relative;
+  margin: 40px auto;
+  max-width: 380px;
+}
+
+.box {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #eff0f2;
+  box-shadow: 0px 1px 8px rgba(191, 203, 255, 0.25);
+  border-radius: 4px;
+}
+
+.box-1 {
+  height: 515px;
+}
+
+.box-2 {
+  height: 310px;
+}
+
+/* Transitions */
+.box-enter {
+  transform: scale(0.9);
+  opacity: 0.1;
+
+  border: 1px solid transparent;
+  box-shadow: 0px 1px 8px transparent;
+}
+
+.box-enter-active {
+  transform: scale(1);
+  transition: transform 300ms cubic-bezier(0.85, 0, 0.15, 1);
+  opacity: 1;
+
+  border: 1px solid #eff0f2;
+  box-shadow: 0px 1px 8px rgba(191, 203, 255, 0.25);
+}
+
+.box-exit {
+  transform: scale(1);
+  opacity: 1;
+
+  border: 1px solid #eff0f2;
+  box-shadow: 0px 1px 8px rgba(191, 203, 255, 0.25);
+}
+
+.box-exit-active {
+  transform: scale(0.9);
+  transition: 300ms cubic-bezier(0.85, 0, 0.15, 1);
+  opacity: 0.1;
+
+  border: 1px solid transparent;
+  box-shadow: 0px 1px 8px transparent;
 }

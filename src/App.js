@@ -3,6 +3,7 @@ import './styles.css';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import SignupForm from './components/SignupForm/SignupForm';
 import SSOForm from './components/SSOForm/SSOForm';
+import HeroContent from './components/HeroContent/HeroContent';
 
 function WithTransition({ isActive, children }) {
   return (
@@ -45,9 +46,12 @@ export default function App() {
 
   return (
     <div className="App">
-      <div className="box-container">
-        <Box1 sso={sso} toggleSSO={toggleSSO} />
-        <Box2 sso={sso} toggleSSO={toggleSSO} />
+      <div className="page-layout">
+        <HeroContent />
+        <div className="box-container">
+          <Box1 sso={sso} toggleSSO={toggleSSO} />
+          <Box2 sso={sso} toggleSSO={toggleSSO} />
+        </div>
       </div>
     </div>
   );

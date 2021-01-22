@@ -50,6 +50,13 @@ input {
   font-family: 'Poppins', sans-serif;
 }
 
+.page-layout {
+  max-width: 734px;
+  margin: 120px auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
 /* UI */
 .button-round {
   height: 40px;
@@ -68,8 +75,7 @@ input {
 
 .box-container {
   position: relative;
-  margin: 40px auto;
-  max-width: 380px;
+  width: 380px;
 }
 
 .box {

@@ -9,7 +9,7 @@ function WithTransition({ isActive, children }) {
   return (
     <TransitionGroup component={null}>
       {isActive && (
-        <CSSTransition classNames="box" timeout={400}>
+        <CSSTransition classNames="box" timeout={360}>
           {children}
         </CSSTransition>
       )}

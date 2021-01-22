@@ -98,7 +98,7 @@ input {
 
 /* Transitions */
 .box-enter {
-  transform: scale(0.9);
+  transform: scale(0.92);
   opacity: 0;
 
   border: 1px solid transparent;
@@ -107,7 +107,7 @@ input {
 
 .box-enter-active {
   transform: scale(1);
-  transition: 200ms cubic-bezier(0.85, 0, 0.15, 1) 200ms;
+  transition: 180ms cubic-bezier(0.85, 0, 0.15, 1) 180ms;
   opacity: 1;
 
   border: 1px solid #eff0f2;
@@ -123,8 +123,8 @@ input {
 }
 
 .box-exit-active {
-  transform: scale(0.9);
-  transition: 200ms cubic-bezier(0.85, 0, 0.15, 1);
+  transform: scale(0.92);
+  transition: 180ms cubic-bezier(0.85, 0, 0.15, 1);
   opacity: 0;
 
   border: 1px solid transparent;

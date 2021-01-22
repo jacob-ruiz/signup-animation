@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import './styles.css';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import SignupForm from './components/SignupForm/SignupForm';
+import SSOForm from './components/SSOForm/SSOForm';
 
 function WithTransition({ isActive, children }) {
   return (
     <TransitionGroup component={null}>
       {isActive && (
-        <CSSTransition classNames="box" timeout={300}>
+        <CSSTransition classNames="box" timeout={400}>
           {children}
         </CSSTransition>
       )}
@@ -18,8 +20,7 @@ function Box1({ sso, toggleSSO }) {
   return (
     <WithTransition isActive={sso === false}>
       <div className="box box-1">
-        <div>Box 1</div>
-        <button onClick={toggleSSO}>Use SSO</button>
+        <SignupForm toggleSSO={toggleSSO} />
       </div>
     </WithTransition>
   );
@@ -29,15 +30,14 @@ function Box2({ sso, toggleSSO }) {
   return (
     <WithTransition isActive={sso === true}>
       <div className="box box-2">
-        <div>Box 2</div>
-        <button onClick={toggleSSO}>Back</button>
+        <SSOForm toggleSSO={toggleSSO} />
       </div>
     </WithTransition>
   );
 }
 
 export default function App() {
-  const [sso, setSSO] = useState(false);
+  const [sso, setSSO] = useState(true);
 
   function toggleSSO() {
     setSSO(!sso);
